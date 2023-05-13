@@ -1,0 +1,58 @@
+.wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 100;
+}
+
+.search {
+  width: 30vw;
+  line-height: 3em;
+  border-radius: 25px;
+  border: transparent;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation li {
+  margin: 0 1em;
+  text-align: center;
+}
+
+.navText {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.exitVisible {
+  visibility: visible;
+}
+
+.exitHidden {
+  visibility: hidden;
+}
+
+.active {
+  color: rgb(250, 150, 50);
+}
+.cartAmoun {
+  background-color: rgb(120, 250, 10);
+  color: white;
+  padding: 1px 2px;
+  border-radius: 5px;
+}
+
+@media (max-width: 720px) {
+  .DogFood {
+    visibility: hidden;
+  }
+}

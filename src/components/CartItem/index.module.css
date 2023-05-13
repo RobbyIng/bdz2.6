@@ -1,0 +1,29 @@
+.cardProduct {
+  margin: 3px;
+  width: 78vw;
+  padding: 3px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: solid rgb(200, 200, 150);
+}
+
+.addToBin {
+  font-weight: bold;
+  background-color: yellow;
+  height: 5vh;
+  width: 10vw;
+  border: transparent;
+  border-radius: 15px;
+  margin: 0;
+}
+
+.addToBin:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 8px 8px rgb(200, 200, 150);
+}
+.binBox {
+  margin: 1em;
+}

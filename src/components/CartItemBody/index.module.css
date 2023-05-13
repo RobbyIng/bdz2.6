@@ -1,0 +1,48 @@
+.cardMain {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.cardImageBox {
+  min-width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgCardProduct {
+  max-width: 120px;
+  max-height: 15vh;
+  margin: 3px;
+}
+.imgCardProduct:hover {
+  cursor: pointer;
+}
+
+.cardBody {
+  height: 16vh;
+  bottom: 0;
+  position: relative;
+}
+
+.cardBody p {
+  margin: 0;
+  padding: 0;
+}
+
+.cardAmount {
+  font-size: smaller;
+}
+
+.cardPrice {
+  font-weight: bold;
+}
+
+.cardTitle {
+  font-size: larger;
+  font-weight: bold;
+}
+.cardTitle:hover {
+  cursor: pointer;
+  color: rgb(200, 200, 150);
+}
