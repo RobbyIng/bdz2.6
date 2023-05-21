@@ -12,8 +12,11 @@
   margin: 0px 0px 1px 0px;
 }
 .sortStyles {
-  margin: 0 1px;
+  background-color: yellow;
+  border-style: hidden;
 }
 .filtersWrapper {
   background-color: yellow;
+  font-size: smaller;
+  padding-bottom: 1px;
 }
