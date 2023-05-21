@@ -1,0 +1,39 @@
+.btnStyle {
+  font-size: medium;
+  background-color: yellow;
+  height: 5vh;
+  border: transparent;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 3px 10px;
+}
+
+.btnStyle:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 8px 8px rgb(200, 200, 150);
+}
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px;
+}
+.checkWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 3px;
+}
+
+.inputField {
+  width: 20vw;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redLines {
+  color: red;
+  background-color: red;
+}

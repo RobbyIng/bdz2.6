@@ -4,18 +4,17 @@ import { useDebounce } from '../../hooks/useDebounce'
 import { useDispatch } from 'react-redux'
 import { changeSearchValue } from '../../redux/slices/filterSlice'
 import styles from './index.module.css'
+import { SEARCH_PARAMS } from '../../utils/constants'
 
 export const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const [searchValue, setSearchValue] = useState(() => {
-    const firstSearch = searchParams.get('search')
+    const firstSearch = searchParams.get(SEARCH_PARAMS)
 
     return firstSearch ? firstSearch : ''
   })
   const dispatch = useDispatch()
   const debounceValue = useDebounce(searchValue, 500)
-
-  // console.log(debounceValue)
 
   useEffect(() => {
     dispatch(changeSearchValue(debounceValue))
@@ -23,15 +22,12 @@ export const Search = () => {
 
   const handleChange = (event) => {
     setSearchValue(event.target.value)
-    // console.log(event.target.value)
-
-    // console.log(`before ${searchParams}`)
 
     if (!event.target.value) searchParams.delete('search')
 
     const params = {}
     searchParams.forEach((value, key) => (params[key] = value))
-    // console.log(`after ${params}`)
+
     return setSearchParams({ ...params, search: event.target.value })
   }
 

@@ -4,28 +4,37 @@ import React from 'react'
 import { Search } from '../../components/Search'
 import { useSelector } from 'react-redux'
 
+const navLinkMass = [
+  {
+    to: '/liked',
+    iClName: 'fa fa-regular fa-heart fa-lg',
+    pValue: 'Избранное',
+    navFavor: 'exist',
+  },
+  {
+    to: '/basket',
+    iClName: 'fa fa-regular fa-briefcase fa-lg',
+    pValue: 'Корзина',
+    navCart: 'exist',
+  },
+  {
+    to: '/userData',
+    iClName: 'fa fa-light fa-paw fa-lg',
+    pValue: '',
+  },
+]
+
 const Header = () => {
   const { name } = useSelector((state) => state.user)
-  const { cart } = useSelector((state) => state)
+  const { cart, favorites } = useSelector((state) => state)
 
-  const navLinkMass = [
-    {
-      to: '/liked',
-      iClName: 'fa fa-regular fa-heart fa-lg',
-      pValue: 'Избранное',
-    },
-    {
-      to: '/basket',
-      iClName: 'fa fa-regular fa-briefcase fa-lg',
-      pValue: 'Корзина',
-      navCart: cart.length ? cart.length : '',
-    },
-    {
-      to: '/userData',
-      iClName: 'fa fa-light fa-paw fa-lg',
-      pValue: name ? name : 'Пользователь',
-    },
-  ]
+  const handleUser = (elemLink, name) => {
+    return elemLink.to !== '/userData'
+      ? elemLink.pValue
+      : name
+      ? name
+      : 'Пользователь'
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -52,9 +61,16 @@ const Header = () => {
                 >
                   <i className={elemLink.iClName}></i>
                   {elemLink.navCart && (
-                    <span className={styles.cartAmoun}>{elemLink.navCart}</span>
+                    <span className={styles.Amount}>
+                      {cart.length ? cart.length : ''}
+                    </span>
                   )}
-                  <p className={styles.navText}>{elemLink.pValue}</p>
+                  {elemLink.navFavor && (
+                    <span className={styles.Amount}>
+                      {favorites.length ? favorites.length : ''}
+                    </span>
+                  )}
+                  <p className={styles.navText}>{handleUser(elemLink, name)}</p>
                 </NavLink>
               </li>
             )

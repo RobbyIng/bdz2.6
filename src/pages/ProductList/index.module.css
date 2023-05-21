@@ -6,3 +6,17 @@
   max-height: 70vh;
   overflow: auto;
 }
+.filtersWrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 1px 0px;
+}
+.sortStyles {
+  background-color: yellow;
+  border-style: hidden;
+}
+.filtersWrapper {
+  background-color: yellow;
+  font-size: smaller;
+  padding-bottom: 1px;
+}

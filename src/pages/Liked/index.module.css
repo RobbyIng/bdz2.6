@@ -1,7 +1,31 @@
-.userDataForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3em;
+.productList {
+  padding: 2px;
+  max-height: 64vh;
+  overflow: auto;
+}
+.title {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 5vh;
+}
+.redColor {
+  color: blue;
+}
+
+.redColor:hover {
+  color: red;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itemBody {
+  margin-right: 3em;
+  width: 50vw;
+}
+.favorButtonContainer {
+  width: 20vw;
 }

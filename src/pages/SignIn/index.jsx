@@ -42,8 +42,6 @@ export const SignIn = () => {
       dispatch(setUpUser({ ...res.data, token: res.token }))
       return navigate('/products')
     }
-
-    // return
   }
 
   return (

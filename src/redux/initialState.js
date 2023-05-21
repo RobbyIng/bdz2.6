@@ -4,9 +4,10 @@ export const myInitialState = {
   user: {},
   filter: {
     search: '',
+    sorting: '',
   },
   cart: [],
-  favorites: {},
+  favorites: [],
 }
 
 export const getInitialState = () => {
