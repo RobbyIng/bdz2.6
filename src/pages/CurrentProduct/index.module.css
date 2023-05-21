@@ -33,7 +33,12 @@
   font-size: larger;
   font-weight: bold;
 }
-
+.favorButtonContainer {
+  display: flex;
+  justify-content: center;
+  width: 25vw;
+  margin-bottom: 2em;
+}
 .btnBin {
   font-size: larger;
   background-color: yellow;

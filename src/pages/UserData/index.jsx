@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux'
 import { cleanUser } from '../../redux/slices/userSlice'
 import { useNoAuth } from '../../hooks/useNoAuth'
 import { cleanCart } from '../../redux/slices/cartSlice'
+import { cleanFavorList } from '../../redux/slices/favoriteSlice'
+import { AddNewProduct } from '../../components/AddNewProduct'
 
 export const UserData = () => {
   const { token } = useNoAuth()
@@ -16,6 +18,7 @@ export const UserData = () => {
   const handleExit = () => {
     dispatch(cleanCart())
     dispatch(cleanUser())
+    dispatch(cleanFavorList())
     return navigate('/')
   }
 
@@ -50,6 +53,7 @@ export const UserData = () => {
         >
           Выход из сервисов
         </Link>
+        <AddNewProduct />
       </div>
     </div>
   )

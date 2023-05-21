@@ -1,8 +1,8 @@
 .cardProduct {
-  margin: 3px;
+  margin: 2px;
   width: 20vw;
   height: 34vh;
-  padding: 3px;
+  padding: 2px;
   border-radius: 10%;
   display: flex;
   justify-content: center;
@@ -37,38 +37,43 @@
 }
 
 .cardAmount {
-  font-size: smaller;
+  line-height: 90%;
+  font-size: small;
+  margin: 0;
+  padding: 0;
 }
 .cardTitle {
-  font-size: larger;
+  font-size: smaller;
   font-weight: bold;
-}
-
-.addToBin {
-  font-weight: bold;
-  background-color: yellow;
-  height: 5vh;
-  border: transparent;
-  border-radius: 15px;
   margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.cardPrc {
+  font-size: smaller;
+  margin: 0;
+  padding: 0;
+}
+.favorBtn {
+  position: relative;
+  bottom: 0;
 }
 
-.addToBin:hover {
-  cursor: pointer;
-  box-shadow: 1px 1px 8px 8px rgb(200, 200, 150);
-  cursor: grab;
+@media (max-width: 900px) {
+  .cardProduct {
+    width: 40vw;
+  }
 }
-
 @media (max-width: 720px) {
   .cardProduct {
-    width: 45vw;
+    width: 42vw;
   }
 }
 
 @media (max-width: 520px) {
   .cardProduct {
     width: 49vw;
-    height: 35vh;
+    height: 34vh;
   }
 
   .imgCardProduct {

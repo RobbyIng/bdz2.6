@@ -3,6 +3,7 @@ import styles from './index.module.css'
 import { fetchCurrentProduct } from '../../api/products'
 import { useQuery } from '@tanstack/react-query'
 import { useSelector } from 'react-redux'
+import { FavorButton } from '../../components/FavorButton'
 
 export const CurrentProduct = () => {
   const { idOfProduct } = useParams()
@@ -41,6 +42,9 @@ export const CurrentProduct = () => {
           <p className={styles.cardTitle}>Цена: {prodCurrentItem.price}</p>
           <p className={styles.cardAmount}>{prodCurrentItem.stock} шт</p>
           <p className={styles.pcardBody}>{prodCurrentItem.name}</p>
+        </div>
+        <div className={styles.favorButtonContainer}>
+          <FavorButton productItem={prodCurrentItem} />
         </div>
         <button
           className={styles.btnBin}
