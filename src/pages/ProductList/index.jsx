@@ -45,7 +45,6 @@ export const ProductList = () => {
   const handleSort = (event) => {
     const value = event.target.value
     setSortValue(value)
-    console.log(value)
     setSearchParams((prev) => {
       prev.set('sort', value)
       return prev

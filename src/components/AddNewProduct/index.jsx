@@ -185,7 +185,6 @@ export const AddNewProduct = () => {
               />
               <ErrorMessage className={styles.redLines} name="description" />
             </div>
-            {/* <p className="error-msg"></p> */}
             <div className={styles.btnWrapper}>
               <button className={styles.btnStyle} type="submit">
                 Подтвердить

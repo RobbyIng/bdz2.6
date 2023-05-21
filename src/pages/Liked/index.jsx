@@ -19,7 +19,6 @@ export const LikedList = () => {
       ).then((value) => value)
     },
   })
-  console.log(data)
   if (isLoading) return <p>Идет загрузка...</p>
   if (isError) return <p>Произошла ошибка: {error}</p>
   if (data.err) return <p>Произошла ошибка: {data.message}</p>
@@ -33,28 +32,23 @@ export const LikedList = () => {
         </Link>
       </p>
     )
-  if (data)
-    return (
-      <div className={styles.productLikedList}>
-        <h1 className={styles.title}>Избранные товары</h1>
-        <div className={styles.productList}>
-          {data.map((productFavorItem) => {
-            if (productFavorItem.value)
-              return (
-                <div
-                  key={productFavorItem.value._id}
-                  className={styles.wrapper}
-                >
-                  <div className={styles.itemBody}>
-                    <MemoCartItemBody cartItem={productFavorItem.value} />
-                  </div>
-                  <div className={styles.favorButtonContainer}>
-                    <FavorButton productItem={productFavorItem.value} />
-                  </div>
-                </div>
-              )
-          })}
-        </div>
+  return (
+    <div className={styles.productLikedList}>
+      <h1 className={styles.title}>Избранные товары</h1>
+      <div className={styles.productList}>
+        {data.map((productFavorItem) => {
+          return productFavorItem.value ? (
+            <div key={productFavorItem.value._id} className={styles.wrapper}>
+              <div className={styles.itemBody}>
+                <MemoCartItemBody cartItem={productFavorItem.value} />
+              </div>
+              <div className={styles.favorButtonContainer}>
+                <FavorButton productItem={productFavorItem.value} />
+              </div>
+            </div>
+          ) : null
+        })}
       </div>
-    )
+    </div>
+  )
 }
