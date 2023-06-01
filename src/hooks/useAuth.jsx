@@ -9,6 +9,4 @@ export const useAuth = () => {
   useEffect(() => {
     if (token) navigate('/products')
   }, [navigate, token])
-
-  return { token }
 }

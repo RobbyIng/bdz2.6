@@ -14,7 +14,7 @@
 }
 
 .likeContainerFavor {
-  color: pink;
+  color: rgb(250, 150, 150);
   cursor: grab;
   background-color: white;
   border-radius: 5px;

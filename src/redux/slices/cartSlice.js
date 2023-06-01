@@ -6,26 +6,27 @@ export const cartSlice = createSlice({
   initialState: myInitialState.cart,
   reducers: {
     addCartItem(state, action) {
-      return state ? [...state, action.payload] : [action.payload]
+      return [...state, action.payload]
     },
+
     deleteCartItem(state, action) {
       return state.filter((el) => el.id !== action.payload)
     },
-    cleanCart: () => {
-      return myInitialState.cart
-    },
+
+    cleanCart: () => myInitialState.cart,
+
     incrementCartItem(state, action) {
-      return state.forEach((el) =>
+      state.map((el) =>
         el.id === action.payload ? (el.count = el.count + 1) : el.count
       )
     },
     decrementCartItem(state, action) {
-      return state.forEach((el) =>
+      state.map((el) =>
         el.id === action.payload ? (el.count = el.count - 1) : el.count
       )
     },
     changeCartItemIncluded(state, action) {
-      return state.forEach((el) =>
+      state.map((el) =>
         el.id === action.payload ? (el.included = !el.included) : el.included
       )
     },

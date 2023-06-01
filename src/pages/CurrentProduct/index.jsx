@@ -23,7 +23,6 @@ export const CurrentProduct = () => {
       const responce = fetchCurrentProduct(token, idOfProduct)
       return responce
     },
-    // enabled:  !!token
   })
   if (isLoading) return <p>Идет загрузка...</p>
   if (isError) return <p>Произошла ошибка: {error}</p>
@@ -49,7 +48,7 @@ export const CurrentProduct = () => {
         <button
           className={styles.btnBin}
           type="button"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate('/products')}
         >
           Назад
         </button>

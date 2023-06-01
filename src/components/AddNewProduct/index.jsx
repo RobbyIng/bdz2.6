@@ -93,7 +93,7 @@ export const AddNewProduct = () => {
                 placeholder="discount"
                 className={styles.inputField}
               />
-              <ErrorMessage className={styles.redLines} name="discount" />
+              <ErrorMessage className="warning" name="discount" />
             </div>
             <div className={styles.inputWrapper}>
               <label htmlFor="stock">Stock</label>
@@ -104,7 +104,7 @@ export const AddNewProduct = () => {
                 placeholder="stock"
                 className={styles.inputField}
               />
-              <ErrorMessage className={styles.redLines} name="stock" />
+              <ErrorMessage className="warning" name="stock" />
             </div>
             <div className={styles.checkWrapper}>
               <label className={styles.checkLabel} htmlFor="exampleCheck1">
@@ -116,7 +116,7 @@ export const AddNewProduct = () => {
                 type="checkbox"
                 className={styles.checkField}
               />
-              <ErrorMessage className={styles.redLines} name="available" />
+              <ErrorMessage className="warning" name="available" />
             </div>
             <div className={styles.inputWrapper}>
               <label htmlFor="pictures">Picture</label>
@@ -127,7 +127,7 @@ export const AddNewProduct = () => {
                 placeholder="pictures"
                 className={styles.inputField}
               />
-              <ErrorMessage className={styles.redLines} name="pictures" />
+              <ErrorMessage className="warning" name="pictures" />
             </div>
             <div className={styles.checkWrapper}>
               <label className={styles.checkLabel} htmlFor="exampleCheck1">
@@ -139,7 +139,7 @@ export const AddNewProduct = () => {
                 type="checkbox"
                 className={styles.checkField}
               />
-              <ErrorMessage className={styles.redLines} name="isPublished" />
+              <ErrorMessage className="warning" name="isPublished" />
             </div>
             <div className={styles.inputWrapper}>
               <label htmlFor="name">Название</label>
@@ -150,7 +150,7 @@ export const AddNewProduct = () => {
                 placeholder="name"
                 className={styles.inputField}
               />
-              <ErrorMessage className={styles.redLines} name="name" />
+              <ErrorMessage className="warning" name="name" />
             </div>
             <div className={styles.inputWrapper}>
               <label htmlFor="price">Цена</label>
@@ -161,7 +161,7 @@ export const AddNewProduct = () => {
                 placeholder="price"
                 className={styles.inputField}
               />
-              <ErrorMessage className={styles.redLines} name="price" />
+              <ErrorMessage className="warning" name="price" />
             </div>
             <div className={styles.inputWrapper}>
               <label htmlFor="wight">Вес</label>
@@ -172,7 +172,7 @@ export const AddNewProduct = () => {
                 placeholder="wight"
                 className={styles.inputField}
               />
-              <ErrorMessage className={styles.redLines} name="wight" />
+              <ErrorMessage className="warning" name="wight" />
             </div>
             <div className={styles.inputWrapper}>
               <label htmlFor="description">Описание</label>
@@ -183,7 +183,7 @@ export const AddNewProduct = () => {
                 placeholder="description"
                 className={styles.inputField}
               />
-              <ErrorMessage className={styles.redLines} name="description" />
+              <ErrorMessage className="warning" name="description" />
             </div>
             <div className={styles.btnWrapper}>
               <button className={styles.btnStyle} type="submit">

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { fetchCurrentProduct } from '../../api/products'
-import { MemoCartItemBody } from '../../components/CartItemBody'
+import { CartItemBody } from '../../components/CartItemBody'
 import { FavorButton } from '../../components/FavorButton'
 
 export const LikedList = () => {
@@ -40,7 +40,7 @@ export const LikedList = () => {
           return productFavorItem.value ? (
             <div key={productFavorItem.value._id} className={styles.wrapper}>
               <div className={styles.itemBody}>
-                <MemoCartItemBody cartItem={productFavorItem.value} />
+                <CartItemBody cartItem={productFavorItem.value} />
               </div>
               <div className={styles.favorButtonContainer}>
                 <FavorButton productItem={productFavorItem.value} />

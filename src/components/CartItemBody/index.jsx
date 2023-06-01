@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import styles from './index.module.css'
 import React from 'react'
 
-const CartItemBody = ({ cartItem }) => {
+export const CartItemBody = ({ cartItem }) => {
   const navigate = useNavigate()
   return (
     <div className={styles.cardMain}>
@@ -33,4 +33,4 @@ const CartItemBody = ({ cartItem }) => {
   )
 }
 
-export const MemoCartItemBody = React.memo(CartItemBody)
+// export const MemoCartItemBody = React.memo(CartItemBody)

@@ -76,3 +76,19 @@ export const fetchDelLikeProduct = async (token, params) => {
     return responce
   }
 }
+
+export const fetchCartProducts = (token, cart) =>
+  Promise.allSettled(
+    cart.map((product) =>
+      fetch(`https://api.react-learning.ru/products/${product.id}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          return { id: product.id, data }
+        })
+    )
+  )
