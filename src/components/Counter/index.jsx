@@ -8,7 +8,7 @@ import {
 
 export const Counter = ({ cartItem }) => {
   const dispatch = useDispatch()
-  const { cart } = useSelector((state) => state)
+  const cart = useSelector((state) => state.cart)
 
   const cartReduxItem = cart.find((el) => el.id === cartItem._id)
 

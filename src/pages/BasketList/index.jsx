@@ -12,9 +12,9 @@ export const BasketList = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  const { cart } = useSelector((state) => state)
+  const cart = useSelector((state) => state.cart)
 
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, isFetching } = useQuery({
     queryKey: ['getCartProduct', cart.length],
     queryFn: async () => {
       const responce = await fetchCartProducts(token, cart)
@@ -33,6 +33,8 @@ export const BasketList = () => {
     initialData: [],
     enabled: !!cart.length,
   })
+
+  console.log(data)
   if (isLoading) return <p>Идет загрузка...</p>
   if (isError) return <p>Произошла ошибка: {error}</p>
   if (data.err) return <p>Произошла ошибка: {data.message}</p>
@@ -65,6 +67,7 @@ export const BasketList = () => {
     )
   }, 0)
   return (
+    !isFetching &&
     data && (
       <div className={styles.dataForm}>
         <p className={styles.cardTitle}>Корзина</p>
